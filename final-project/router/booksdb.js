@@ -12,3 +12,29 @@ let books = {
 }
 
 module.exports=books;
+
+// function to simulate the "getting all books"
+const getBookAsync = () => {
+      return new Promise((resolve, reject) => {
+            setTimeout(() => {
+
+                  resolve(books);
+            }, 1000);
+      });
+};
+
+// function to simulate the "get book by ISBN" using async
+const getBookByISBNAsync = (isbn) => {
+      return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                  if (books[isbn]) {
+                        resolve(books[isbn]);
+                  } else {
+                        reject(new Error(`Book with ISBN ${isbn} not found`));
+                  }
+            }, 1000);
+      });
+};
+
+module.exports.getBookAsync = getBookAsync;
+module.exports.getBookByISBNAsync = getBookByISBNAsync;

@@ -82,9 +82,9 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
 });
 
 // delete book review
-regd_users.delete("/auth/review/isbn", (req, res) => {
+regd_users.delete("/auth/review/:isbn", (req, res) => {
     const isbn = req.params.isbn;
-    const username = req.session.authorizaiton.username;
+    const username = req.session.authorization.username;
 
     //check if the list exists
     if(!books[isbn]) {

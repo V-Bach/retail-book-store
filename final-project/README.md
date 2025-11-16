@@ -1,28 +1,31 @@
-# ibm-developing-back-end-apps-with-nodejs-and-express
-IBM Course - Developing Back-End Apps with Node.js and Express
+Small project using javascript with framwork: nodejs and express
 
-First run npm install for Packages installing
-
-Then Run npm in console
-
+First run: *npm install for Packages installing
+Then run: *npm start or *node index.js to start the server
 Postman Json is attached in Project import it in your post to verify
-
 Set environment Variable in Postman
 
 site_url will be http://localhost:5000/
 
-Task -1 API URL http://localhost:5000/books
-Task -2 API URL http://localhost:5000/books/isbn/1
-Task -3 API URL http://localhost:5000/books/author/Chinua Achebe
-Task -4 API URL http://localhost:5000/books/title/Things Fall Apart
-Task -5 API URL http://localhost:5000/books/review/1
-Task -6 API URL http://localhost:5000/customer/register
-Task -7 API URL http://localhost:5000/customer/login
-Task -8 API URL http://localhost:5000/customer/auth/review/1
-Task -9 API URL http://localhost:5000/customer/auth/review/1
-Task -10 API URL http://localhost:5000/books/all
-Task -11 API URL http://localhost:5000/books/isbn-2/1
-Task -12 API URL http://localhost:5000/books/author-2/Chinua Achebe
-Task -13 API URL http://localhost:5000/books/title-2/Things Fall Apart
+
+Url for Get method
+#1: Get book by ISBN:  GET http://localhost:5000/customer/isbn/1
+#2: Get book by author:  GET http://localhost:5000/customer/author/Jane Austen
+#3: Get book by review:  GET http://localhost:5000/customer/review/1
+#4: Get book by title:  GET http://localhost:5000/customer/title/pride  
+
+
+Url for authentication
+#1: register:  POST http://localhost:5000/customer/register
+    body->Json
+    {
+        "username": "test",
+        "password": "123"
+    }
+#2: login:  POST http://localhost:5000/customer/login  (using the json last registered)
+#3: add review:  PUT http://localhost:5000/customer/auth/review/<isbn-number>?review=<Reviews>
+#4: delete review:  DELETE http://localhost:5000/customer/auth/review/1
+
+
 
 

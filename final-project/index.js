@@ -31,4 +31,4 @@ app.use("/customer/auth/*", function auth(req, res, next) {
 app.use("/customer", customer_routes);
 app.use("/customer", genl_routers);
 
-app.listen(PORT, () => console.log("Sever is running"));
+app.listen(PORT, () => console.log(`Sever is running on port ${PORT}`));

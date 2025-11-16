@@ -67,7 +67,10 @@ public_users.get('/title/:title',function (req, res) {
     const foundBooks = [];
 
     for(const isbn in books) {
-        if (books[isbn].title.toLowerCase().includes(requestedTitle.toLowerCase())) {
+        // Checking if 'title' exists before using toLowerCase()
+        if (books[isbn].title && 
+            books[isbn].title.toLowerCase().includes(requestedTitle.toLowerCase())) {
+            
             foundBooks.push({ isbn: isbn, ...books[isbn]});
         }
     }
